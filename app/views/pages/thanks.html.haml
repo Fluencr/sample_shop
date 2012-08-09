@@ -1,0 +1,27 @@
+-content_for(:head) do
+  :javascript
+    var _fluencr = _fluencr || [];
+    (function() {
+      var ce = document.createElement('script'); ce.type = 'text/javascript'; ce.async = true;
+      ce.src = '#{FLUENCR_SOURCE}';
+      var fs = document.getElementsByTagName('script')[0]; fs.parentNode.insertBefore(ce, fs);
+    })();
+
+.well
+  %h1 Thanks for your Order!
+
+.span7-prepend3
+  %table.table
+    %tr
+      %th Product
+      %th Price
+      %th Ships
+    %tr
+      %td Playstation 3
+      %td $199.99
+      %td 3 Days (usually)
+-if @hash_tag.present?
+  :javascript
+    $(document).ready(function() {
+      _fluencr.push(199.99, #{@hash_tag});
+    });

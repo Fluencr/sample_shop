@@ -1,0 +1,19 @@
+.well
+  %h1 In Your Cart
+
+.span7-prepend3
+  %table.table
+    %tr
+      %th Product
+      %th Price
+      %th Ships
+    %tr
+      %td Playstation 3
+      %td $199.99
+      %td 3 Days (usually)
+
+  =link_to thanks_page_path do
+    =image_tag "checkout.png"
+  %br{:clear=>"all"}
+  %br
+  %p=link_to "Confirm", thanks_page_path, class: "btn-large btn btn-success", disable_with: "Processing...", style: "float: right"
