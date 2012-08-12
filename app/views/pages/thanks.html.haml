@@ -22,6 +22,4 @@
       %td 3 Days (usually)
 -if @hash_tag.present?
   :javascript
-    $(document).ready(function() {
-      _fluencr.push(199.99, "#{@hash_tag}");
-    });
+    _fluencr.push(199.99, "#{@hash_tag}");
